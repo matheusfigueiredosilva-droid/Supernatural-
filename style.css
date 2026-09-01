@@ -1,1 +1,689 @@
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b0b0b;
+    color: #eeeeee;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+header {
+    width: 100%;
+    background-color: #080808;
+    border-bottom: 1px solid #292929;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #d8b06a;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.menu {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: #dddddd;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #b52929;
+}
+
+
+/* ================================
+   PÁGINA INICIAL
+================================ */
+
+.inicio {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.88)
+        ),
+        url("imagens/estrada.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio-conteudo {
+    max-width: 750px;
+}
+
+.subtitulo {
+    color: #b52929;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.inicio h1 {
+    color: #eeeeee;
+
+    font-size: clamp(50px, 9vw, 100px);
+
+    line-height: 0.95;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+
+    text-shadow: 4px 4px 15px #000000;
+}
+
+.inicio h2 {
+    color: #d8b06a;
+
+    font-size: clamp(25px, 4vw, 40px);
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.inicio-conteudo > p:not(.subtitulo) {
+    max-width: 600px;
+
+    color: #bbbbbb;
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background-color: #8f2020;
+
+    color: white;
+
+    border: 1px solid #b52929;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #b52929;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(181, 41, 41, 0.25);
+}
+
+
+/* ================================
+   SEÇÕES
+================================ */
+
+.secao {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 25px;
+}
+
+.titulo-secao {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.titulo-secao p {
+    color: #b52929;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.titulo-secao h2 {
+    color: #eeeeee;
+
+    font-size: clamp(32px, 5vw, 50px);
+}
+
+
+/* ================================
+   SOBRE A SÉRIE
+================================ */
+
+.conteudo-serie {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+.texto-serie {
+    color: #bbbbbb;
+
+    font-size: 17px;
+}
+
+.texto-serie p {
+    margin-bottom: 20px;
+}
+
+.texto-serie strong {
+    color: #d8b06a;
+}
+
+.info-serie {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+}
+
+.info {
+    padding: 25px;
+
+    background-color: #111111;
+
+    border: 1px solid #292929;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.info:hover {
+    border-color: #8f2020;
+
+    transform: translateY(-4px);
+}
+
+.info span {
+    font-size: 30px;
+}
+
+.info h3 {
+    color: #d8b06a;
+
+    font-size: 30px;
+}
+
+.info p {
+    color: #999999;
+}
+
+
+/* ================================
+   PERSONAGENS
+================================ */
+
+.personagens {
+    max-width: none;
+
+    background-color: #101010;
+}
+
+.personagens .titulo-secao,
+.personagens .cards {
+    max-width: 1150px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.card-personagem {
+    background-color: #151515;
+
+    border: 1px solid #292929;
+
+    padding: 30px 22px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.card-personagem:hover {
+    transform: translateY(-8px);
+
+    border-color: #8f2020;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.icone-personagem {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #202020;
+
+    border: 1px solid #3a3a3a;
+
+    border-radius: 50%;
+
+    font-size: 35px;
+}
+
+.card-personagem h3 {
+    color: #d8b06a;
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.card-personagem p {
+    color: #999999;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   CRIATURAS
+================================ */
+
+.criaturas-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.criatura {
+    padding: 30px;
+
+    background-color: #111111;
+
+    border-left: 3px solid #8f2020;
+
+    transition: 0.3s;
+}
+
+.criatura:hover {
+    background-color: #171717;
+
+    transform: translateX(5px);
+}
+
+.criatura h3 {
+    color: #d8b06a;
+
+    margin-bottom: 12px;
+
+    font-size: 20px;
+}
+
+.criatura p {
+    color: #999999;
+
+    font-size: 15px;
+}
+
+
+/* ================================
+   IMPALA
+================================ */
+
+.impala {
+    max-width: none;
+
+    background-color: #101010;
+}
+
+.impala .titulo-secao,
+.impala-conteudo {
+    max-width: 1150px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.impala-conteudo {
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.impala-icon {
+    min-height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #181818;
+
+    border: 1px solid #292929;
+
+    font-size: 100px;
+}
+
+.impala-conteudo p {
+    color: #aaaaaa;
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+}
+
+.impala-conteudo strong {
+    color: #d8b06a;
+}
+
+
+/* ================================
+   TEMPORADAS
+================================ */
+
+.temporadas {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.temporada {
+    padding: 25px 15px;
+
+    background-color: #111111;
+
+    border: 1px solid #292929;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.temporada:hover {
+    background-color: #8f2020;
+
+    border-color: #b52929;
+
+    transform: scale(1.04);
+}
+
+.temporada span {
+    display: block;
+
+    color: #d8b06a;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.temporada p {
+    color: #cccccc;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   FRASE FINAL
+================================ */
+
+.frase-final {
+    padding: 120px 25px;
+
+    text-align: center;
+
+    background-color: #070707;
+
+    border-top: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+}
+
+.frase-final h2 {
+    color: #d8b06a;
+
+    font-size: clamp(25px, 5vw, 45px);
+
+    font-style: italic;
+
+    margin-bottom: 15px;
+}
+
+.frase-final p {
+    color: #888888;
+
+    letter-spacing: 3px;
+}
+
+
+/* ================================
+   RODAPÉ
+================================ */
+
+footer {
+    background-color: #050505;
+}
+
+.footer-conteudo {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 50px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-conteudo h3 {
+    color: #d8b06a;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.footer-conteudo p {
+    color: #777777;
+
+    font-size: 14px;
+}
+
+.footer-final {
+    padding: 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #1d1d1d;
+}
+
+.footer-final p {
+    color: #555555;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 900px) {
+
+    .menu {
+        gap: 12px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .criaturas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .temporadas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .conteudo-serie {
+        grid-template-columns: 1fr;
+    }
+
+    .impala-conteudo {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .inicio {
+        min-height: 80vh;
+
+        padding: 60px 25px;
+    }
+
+    .inicio h1 {
+        font-size: 50px;
+
+        letter-spacing: 2px;
+    }
+
+    .inicio h2 {
+        font-size: 27px;
+    }
+
+    .inicio-conteudo > p:not(.subtitulo) {
+        font-size: 16px;
+    }
+
+    .secao {
+        padding: 70px 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .criaturas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .temporadas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-conteudo {
+        flex-direction: column;
+    }
+  }
